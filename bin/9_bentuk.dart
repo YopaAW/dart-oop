@@ -1,0 +1,23 @@
+import 'dart:math';
+
+// Abstract class Bentuk
+abstract class Bentuk {
+  double hitungLuas();
+}
+
+// Class Lingkaran turunan dari Bentuk
+class Lingkaran extends Bentuk {
+  double jariJari;
+
+  Lingkaran(this.jariJari);
+
+  @override
+  double hitungLuas() {
+    return pi * jariJari * jariJari;
+  }
+}
+
+void main() {
+  var lingkaran = Lingkaran(7);
+  print('Luas Lingkaran: ${lingkaran.hitungLuas()}');
+}
